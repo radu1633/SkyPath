@@ -47,3 +47,35 @@
 ---
 
 ## 🏗️ Architecture
+
+┌─────────────────────────────────────────────────────────────┐ │ 🎯 ORCHESTRATOR AGENT │ │ (Receives & Coordinates Requests) │ └─────────────────────┬───────────────────────────────────────┘ │ ┌─────────────┼─────────────┐ ▼ ▼ ▼ ┌───────────┐ ┌───────────┐ ┌───────────┐ │ ✈️ Flight │ │ 🏨 Hotel │ │ 📋 Itinerary│ │ Agent │ │ Agent │ │ Agent │ └─────┬─────┘ └─────┬─────┘ └─────┬─────┘ │ │ │ └──────────────┼──────────────┘ ▼ ┌─────────────────────┐ │ 🔗 AMADEUS API │ │ (Real-Time Data) │ └─────────────────────┘
+
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Description |
+|-------|------------|-------------|
+| **Backend** | Django (Python) | Multi-agent orchestration, Amadeus API integration |
+| **Frontend** | React + TypeScript | Modern UI with Vite & Tailwind CSS |
+| **AI** | OpenAI + Custom Agents | LLM coordination, data validation, context sharing |
+| **Data** | Amadeus API | Real-time flight, hotel, and activity data |
+
+---
+
+## 📁 Project Structure
+
+```text
+📦 UiPath-Hackathon-2025
+├── 📂 backend/
+│   ├── 📂 apps/           # Django applications
+│   ├── 📂 config/         # Django configuration
+│   ├── 📂 services/       # Business logic & agents
+│   └── 📄 manage.py       # Django management script
+├── 📂 frontend/
+│   ├── 📂 src/            # React source code
+│   ├── 📄 package.json    # Node dependencies
+│   └── 📄 vite.config.ts  # Vite configuration
+├── 📄 requirements.txt    # Python dependencies
+└── 📄 README.md           # This file
